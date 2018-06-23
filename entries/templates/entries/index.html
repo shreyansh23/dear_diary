@@ -30,43 +30,32 @@
                     </div>
                 </div>
             </article>
+{%if entry_object_list%}
+{%for entry_object in entry_object_list%}
 
             <article class="media">
                 <div class="media-content">
                     <div class="content">
                         <p>
-                            <strong>January 28, 1985 6:14 AM</strong>
-                            <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque
-                            tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                            <strong>{{entry_object.date_posted}}</strong>
+                            <br> {{entry_object.text}}
                         </p>
                     </div>
                 </div>
             </article>
+{%endfor%}
+{%else%}
+          <article class="media">
+              <div class="media-content">
+                  <div class="content">
+                      <p>
+                          <strong>No diary entry available</strong>
 
-            <article class="media">
-                <div class="media-content">
-                    <div class="content">
-                        <p>
-                            <strong>January 28, 1985 6:14 AM</strong>
-                            <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque
-                            tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-                        </p>
-                    </div>
-                </div>
-            </article>
-
-            <article class="media">
-                <div class="media-content">
-                    <div class="content">
-                        <p>
-                            <strong>January 28, 1985 6:14 AM</strong>
-                            <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque
-                            tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-                        </p>
-                    </div>
-                </div>
-            </article>
-
+                      </p>
+                  </div>
+              </div>
+          </article>
+{%endif%}
         </div>
 
     </section>
