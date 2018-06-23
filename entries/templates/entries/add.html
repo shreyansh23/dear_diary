@@ -20,7 +20,12 @@
         </div>
     </section>
     <section class="section">
+
         <div class="container">
+          <div class="control">
+              <a href="{%url 'home'%}"<button class="button is-link">Home</button></a>
+          </div>
+          <br>
 
         <form method="POST" action="{% url 'add' %}">
           {%csrf_token%}
